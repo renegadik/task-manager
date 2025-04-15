@@ -1,0 +1,31 @@
+# Node
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+
+# Laravel & PHP
+/vendor/
+/backend/.env
+/backend/vendor/
+/backend/storage/*.key
+/backend/storage/app/public/
+/backend/storage/logs/
+/backend/storage/framework/cache/*
+/backend/storage/framework/sessions/*
+/backend/storage/framework/views/*
+/backend/storage/framework/testing/*
+/backend/database/*.sqlite
+
+# Flutter (когда появится)
+/mobile/.dart_tool/
+/mobile/build/
+/mobile/.packages
+/mobile/pubspec.lock
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
