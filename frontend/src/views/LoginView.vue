@@ -25,9 +25,12 @@
   const login = async () => {
     error.value = ''
     try {
-      await api.get('/sanctum/csrf-cookie') // получаем XSRF куку
-      await api.post('/login', { email: email.value, password: password.value })
-      const res = await api.get('/user')
+      await api.get('/sanctum/csrf-cookie') // сначала обязательно это
+      await api.post('/login', {
+        email: email.value,
+        password: password.value,
+      })
+      const res = await api.get('/api/user')
       userStore.setUser(res.data)
       router.push('/') // редирект после входа
     } catch (err) {
